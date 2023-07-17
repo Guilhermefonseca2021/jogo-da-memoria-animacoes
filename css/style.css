@@ -1,0 +1,70 @@
+* {
+    font-size: 'anonymous', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /*quero manter minha carta virada para cima visivel ao girar*/
+    transform-style: preserve-3d;
+    /*qro uma animacao p nossa rotacao transform degY*/
+    transition: transform .5s;
+}
+
+.card_front, .card_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px black;
+    /*esconde oq estiver com face virada rotateY180*/
+    backface-visibility: hidden;
+}
+/* animacao para que nosso degree seja exibido */
+.flip{
+    transform: rotateY(180deg);
+}
+
+.card_front {
+    /*deixar a carta ao contrario*/
+    transform: rotateY(180deg); 
+    background-color: #101c2c;
+}
+
+.card_back {
+    color: #101c2c;
+    background-color: #0565ff;
+    font-size: 60px;
+}
+
+#gameOver {
+    /* qro q pegue a tela inteira */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: azure;
+    font-size: 50px;
+    /*no javasscript qnd der gameover passo o display para flex*/
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* pars qnd gameover a tela estar em cima de todos elementos*/
+    top: 0;
+}
+
+#restart {
+    padding: 20px;
+    font-size: 40px;
+    background-color: orange;
+    border-radius: 20px;
+    border: none;
+}

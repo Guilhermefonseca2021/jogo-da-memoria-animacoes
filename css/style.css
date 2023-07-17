@@ -1,8 +1,17 @@
 * {
-    font-size: 'anonymous', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 'anonymous', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* qro 100% da altura da viewport */
+    height: 100%;
+    background-color: #c7cdd3;
 }
 
 .card {
@@ -12,7 +21,7 @@
     /*quero manter minha carta virada para cima visivel ao girar*/
     transform-style: preserve-3d;
     /*qro uma animacao p nossa rotacao transform degY*/
-    transition: transform .5s;
+    transition: transform 1s;
 }
 
 .card_front, .card_back {
@@ -67,4 +76,11 @@
     background-color: orange;
     border-radius: 20px;
     border: none;
+}
+
+#gameBoard {
+    max-width: 600px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }

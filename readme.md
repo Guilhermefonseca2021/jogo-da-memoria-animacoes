@@ -29,8 +29,3 @@
 
 7. Tente completar o jogo com o menor número de tentativas e tempo.
 
-## Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
